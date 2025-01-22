@@ -1,0 +1,91 @@
+/* Header.module.css */
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    position: relative;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logoContainer {
+    flex: 1;
+  }
+  
+  .logo {
+    height: 40px; /* Adjust size based on your logo's aspect ratio */
+  }
+  
+  .hamburgerMenu {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+  }
+  
+  .hamburgerBar {
+    height: 3px;
+    width: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  
+  .nav {
+    position: absolute;
+    top: 60px;  /* Adjust based on the height of your header */
+    right: 0;
+    left: 0;
+    background-color: #333;
+    padding: 20px;
+    display: none; /* Initially hidden on larger screens */
+  }
+  
+  .navList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .navItem {
+    margin: 10px 0;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  /* Media query to display hamburger menu on smaller screens and hide nav list */
+  @media (max-width: 768px) {
+    .nav {
+      display: block;
+    }
+  
+    .hamburgerMenu {
+      display: flex;
+    }
+  
+    .navList {
+      display: none;
+    }
+  
+    .navList.show {
+      display: flex;
+    }
+  }
+  
